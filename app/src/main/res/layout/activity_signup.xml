@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2196F3"
-    tools:context=".MainActivity">
-
+    tools:context=".signup">
     <FrameLayout
         android:id="@+id/fram"
         android:layout_width="match_parent"
@@ -19,14 +18,49 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/ttt" />
     </FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstname"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fram"
+        android:background="#FDFCFC"
+        android:layout_margin="20dp">
 
+        <EditText
+            android:id="@+id/fstnameEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fram"
+
+            android:hint="FIRST NAME" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastname"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F3F3"
+        android:layout_below="@+id/firstname">
+
+        <EditText
+            android:id="@+id/passbts"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="LAST NAME" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/emaillo"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#F9FAFA"
-        android:layout_below="@+id/fram"
+        android:layout_below="@+id/lastname"
+        android:background="#FBFBFC"
         android:layout_margin="20dp">
 
         <EditText
@@ -35,53 +69,35 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/fram"
 
-            android:background="#FCFDFD"
-
             android:hint="email" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/passbt"
+        android:id="@+id/pass"
+        android:background="#FDFDFC"
         android:layout_margin="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emaillo"
-        android:background="#F9FAFA"
-        app:passwordToggleEnabled="true">
+        android:layout_below="@+id/emaillo">
 
         <EditText
-            android:id="@+id/passbts"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/passet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/fram"
+
 
             android:hint="password" />
 
 
     </com.google.android.material.textfield.TextInputLayout>
-
     <Button
-        android:id="@+id/loginbt"
-        android:layout_width="200dp"
-        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/passbt"
-        android:background="#FCF8F8"
-        android:layout_margin="20dp"
-        android:text="LOGIN"
-        android:onClick="login"/>
-    <Button
-
-        android:layout_width="200dp"
+        android:layout_below="@id/pass"
         android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/loginbt"
-        android:background="#FCF8F8"
-        android:layout_margin="20dp"
-
-        android:text="sing-up"
-        android:onClick="signup"/>
-
+        android:background="#FDFDFC"
+        android:text="SIGN - UP"/>
 
 </RelativeLayout>
